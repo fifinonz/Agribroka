@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Copyright © 2012-2015, Intel Corporation. All rights reserved.
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>AgriBroka: Every Farmers' E-middleman</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <script src="http://debug-software.intel.com/target/target-script-min.js#fPWmpFkz8YMyEqgbWpnNHJfGRPcCp5y5JwblaI1kK28"></script>
+
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+    </head>
+
+    <body id="afui">
+
+
+
+        <div id="content" class="uwrap">
+
+            <!-- /* Login and Registration Screens */ -->
+
+            <div class="upage panel" id="mainpage_options" data-header="none" data-footer="none" selected="true">
+                <div class="upage-outer">
+                    <div class="upage-content" id="mainsub">
+
+                        <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_1 d-margins Heading" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>AgriBroka</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget uib_w_2 d-margins center" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+
+                                    </div>
+                                    <ul class="list widget uib_w_3 d-margins" data-uib="app_framework/listview" data-ver="1">
+                                        <li class="widget uib_w_login" data-uib="app_framework/listitem" data-ver="1"><a class="icon user" href="#login_page">Login</a>
+                                        </li>
+                                        <li class="widget uib_w_register" data-uib="app_framework/listitem" data-ver="1"><a class="icon pencil">Register</a>
+                                        </li>
+                                        <li class="widget uib_w_guest" data-uib="app_framework/listitem" data-ver="1"><a class="icon new">Guest Session</a>
+                                        </li>
+                                    </ul><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                    <!-- /upage-content -->
+
+                </div>
+                <!-- /upage-outer -->
+
+            </div>
+            <div class="upage panel" id="register_page" data-header="af-header-register" data-footer="none">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_11" data-uib="app_framework/header" data-ver="1" id="af-header-register">
+                        <h1>Register</h1>
+                        <div class="widget-container wrapping-col single-centered"></div>
+                        <div class="widget-container content-area horiz-area wrapping-col left with-back">
+                            <a class="button backButton"></a>
+                        </div>
+                        <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                    </header>
+                    <div id="register_pagesub" class="upage-content ">
+
+                        <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_12 d-margins center" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_13" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="Name" type="text">
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_14" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="Email" type="text">
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_15" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="username" type="text">
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_16" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="password" type="text">
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_17" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="confirm password" type="text">
+                                    </div><a class="button widget uib_w_18 d-margins green" data-uib="app_framework/button" data-ver="1">Register</a><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /upage-outer -->
+            </div>
+            <div class="upage panel" id="login_page" data-header="af-header-login" data-footer="none">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_6" data-uib="app_framework/header" data-ver="1" id="af-header-login">
+                        <h1>Login</h1>
+                        <div class="widget-container wrapping-col single-centered"></div>
+                        <div class="widget-container content-area horiz-area wrapping-col left with-back">
+                            <a class="button backButton"></a>
+                        </div>
+                        <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                    </header>
+                    <div id="login_pagesub" class="upage-content ">
+
+                        <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_7 d-margins center" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_8" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="username" type="text">
+                                    </div>
+                                    <div class="table-thing with-label widget uib_w_9" data-uib="app_framework/input" data-ver="1">
+                                        <input class="wide-control" placeholder="password" type="text">
+                                    </div><a class="button widget uib_w_10 d-margins green" data-uib="app_framework/button" data-ver="1">Login</a><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /upage-outer -->
+            </div>
+            <!-- /upage -->
+            <div class="upage panel" id="home_layout" data-header="af-header-home" data-footer="af-footer-0">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_6" data-uib="app_framework/header" data-ver="1" id="af-header-home">
+                        <h1>AgriBroka</h1>
+                        </header>
+                    <div class="upage-content content-area vertical-col" id="uib_page_home">
+
+                        <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+
+                            <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_5 d-margins" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle">
+
+                                        </div>
+                                        <div class="widget-container right-receptacle">
+
+                                        </div>
+                                        <div>
+
+                                            <p>This is the view for the first Tab.</p>
+
+                                        </div>
+                                    </div>
+                                    <span class="uib_shim"></span>
+
+                                </div>
+
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upage panel" id="explore_layout" data-header="af-header-explore" data-footer="af-footer-0">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_6" data-uib="app_framework/header" data-ver="1" id="af-header-explore">
+                        <h1>Explore</h1>
+                        </header>
+                    <div id="uib_page_explore" class="upage-content vertical-col hidden">
+
+                        <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_8 d-margins" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>This is the view for the second Tab.</p>
+                                        </div>
+                                    </div><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upage panel" id="activity_layout" data-header="af-header-activity" data-footer="af-footer-0">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_6" data-uib="app_framework/header" data-ver="1" id="af-header-activity">
+                        <h1>Activity</h1>
+                        </header>
+                    <div id="uib_page_activity" class="upage-content vertical-col hidden">
+                        <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_9 d-margins" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>This is the view for the third Tab.</p>
+                                        </div>
+                                    </div><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="upage panel" id="profile_layout" data-header="af-header-profile" data-footer="af-footer-0">
+                <div class="upage-outer">
+                    <header class="container-group inner-element uib_w_6" data-uib="app_framework/header" data-ver="1" id="af-header-profile">
+                        <h1>Profile</h1>
+                        </header>
+                    <div id="uib_page_profile" class="upage-content vertical-col hidden">
+                        <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+                            <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+
+                                    <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0">
+                                        <div class="widget-container left-receptacle"></div>
+                                        <div class="widget-container right-receptacle"></div>
+                                        <div>
+                                            <p>This is the view for the fourth Tab.</p>
+                                        </div>
+                                    </div><span class="uib_shim"></span>
+                                </div>
+                            </div>
+                            <span class="uib_shim"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="wrap-element uib_w_footer" data-uib="app_framework/footer" data-ver="1" id="af-footer-0">
+
+                <a class="widget uib_w_f_home d-margins icon home" data-uib="app_framework/button" data-ver="1">Home</a><a class="widget uib_w_f_explore d-margins icon info " data-uib="app_framework/button" data-ver="1">Explore</a><a class="widget uib_w_f_activity d-margins icon chat"
+                data-uib="app_framework/button" data-ver="1">Activity</a><a class="widget uib_w_f_profile d-margins icon user" data-uib="app_framework/button" data-ver="1">Profile</a>
+
+            </footer>
+        </div>
+    </body>
+
+</html>
