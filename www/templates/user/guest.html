@@ -1,0 +1,30 @@
+<ion-view title="Guest Session">
+    <ion-nav-buttons side="left">
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+    <a class="button button-clear" href="#/app/settings"><i class="icon ion-gear-a"></i></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        
+		<div class="screen">
+			<img src="http://lorempixel.com/1024/768/"/>
+			<div class="item item-text-wrap">
+				<h1>AgriBroka</h1>
+                <h2>AgriBroka is a free mobile app that allows you to buy fresh farm produce directly from the farm. Check out it's amazing features below and create your free account today!</h2>
+			</div>
+		</div>
+
+        <div class="list">
+
+            <a ng-repeat="item in items" class="item item-icon-left" href="{{item.url}}">
+            <i class="icon {{item.icon}}"></i>
+            {{item.title}}
+            <span class="item-note">
+            {{item.note}}
+            </span>
+            </a>
+
+        </div>
+
+    </ion-content>
+</ion-view>
