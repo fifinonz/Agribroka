@@ -1,5 +1,5 @@
 {
-    "name": "AgriBroka-layout",
+    "name": "AgriBroka",
     "dependencies": {
         "angular-animate": "1.3.13",
         "angular-sanitize": "1.3.13",
