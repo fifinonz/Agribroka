@@ -4,7 +4,7 @@
 // 'agribroka' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'agribroka.controllers' is found in controllers.js
-angular.module('agribroka', ['ionic', 'agribroka.controllers'])
+angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -38,6 +38,17 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers'])
                 templateUrl: "templates/user/signUp.html",
                 controller: "SignUpCtrl"
             }) 
+
+    // Guest Session
+        .state('app.guest', {
+      url: "/guest",
+      views: {
+        'menuContent' :{
+         templateUrl: "templates/user/guest.html",
+          controller: 'GuestCtrl'
+        }
+      }
+    })
 
     // sidebar
     .state('app', {
