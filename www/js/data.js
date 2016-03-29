@@ -6,77 +6,30 @@ angular.module('agribroka.data', [])
     
     data.items = [
         { 
-            title: 'News',
+            title: 'Farm Profiles',
             icon: 'ion-calendar',
-            note: 'Latest News',
+            note: 'Visit the farms',
             url: '#/app/templates/news'
         },
         { 
             title: 'Products',
-            icon: 'ion-bag',
-            note: 'Our Products',
+            icon: 'ion-ios-cart',
+            note: 'Available produce',
             url: '#/app/templates/products'
         },
         { 
-            title: 'Gallery',
-            icon: 'ion-images',
-            note: 'Our Photos',
+            title: 'Create Account',
+            icon: 'ion-person-add',
+            note: 'Join today',
             url: '#/app/templates/gallery'
         },
         { 
-            title: 'Map',
-            icon: 'ion-map',
-            note: 'Find Us',
+            title: 'Login',
+            icon: 'ion-home',
+            note: 'Go to your account',
             url: '#/app/templates/map'
         },
-        { 
-            title: 'About',
-            icon: 'ion-person-stalker',
-            note: 'About Us',
-            url: '#/app/templates/about'
-        },
-        { 
-            title: 'Contact',
-            icon: 'ion-email',
-            note: 'Contact Us',
-            url: '#/app/templates/contact'
-        },
-        { 
-            title: 'RSS',
-            icon: 'ion-social-rss',
-            note: 'RSS Feed',
-            url: '#/app/templates/feeds'
-        },
-        { 
-            title: 'Feed Plugin',
-            icon: 'ion-social-rss-outline',
-            note: 'Atom, RSS, or Media RSS',
-            url: '#/app/templates/feed-categories'
-        },
-        { 
-            title: 'YouTube',
-            icon: 'ion-social-youtube',
-            note: 'YouTube Videos',
-            url: '#/app/templates/youtubevideos'
-        },
-        { 
-            title: 'Wordpress JSON',
-            icon: 'ion-social-wordpress',
-            note: 'JSON API plugin',
-            url: '#/app/templates/posts'
-        },
-        { 
-            title: 'Wordpress Pagination',
-            icon: 'ion-social-wordpress-outline',
-            note: 'Server Side',
-            url: '#/app/templates/serverposts'
-        },
-        { 
-            title: 'Mobile Plugins',
-            icon: 'ion-iphone',
-            note: 'Cordova/PhoneGap',
-            url: '#/app/templates/plugins'
-        },
+
     ]; 
     
     return data;
