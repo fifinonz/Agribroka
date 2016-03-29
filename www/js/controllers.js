@@ -86,5 +86,10 @@ angular.module('agribroka.controllers', [])
     }, 1000);
   }; // end Sign Up function
 
+
+})
+// Guest Controller
+.controller('GuestCtrl', function($scope, Data) {
+  $scope.items = Data.items;
 })
 
