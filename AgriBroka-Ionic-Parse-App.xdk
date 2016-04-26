@@ -1,12 +1,12 @@
 {
   "project": {
-    "projectSettingsVersion": "2.0.0",
+    "projectSettingsVersion": "3.0.0",
     "creationData": {
       "type": "Import",
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "",
       "projectGuid": "e4c730df-f0d7-4231-b6ca-9444e55a4549",
-      "lastModifiedDate": 1459163947840,
+      "lastModifiedDate": 1461600179909,
       "creationDate": 1459163947209
     },
     "sourceDirectory": "www",
@@ -16,7 +16,15 @@
     "testDirectory": "test",
     "startFile": "index.html",
     "projectTags": [],
-    "projectFiles": {},
+    "projectFiles": {
+      "xdk-publish-meta-data.json": {
+        "settings": {
+          "project": {
+            "XDK-not-deployed": "True"
+          }
+        }
+      }
+    },
     "projectDirectories": {
       "xdk": {
         "settings": {
@@ -31,14 +39,14 @@
       {
         "id": "cordova-plugin-device",
         "name": "Device",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "originType": "cordova.io",
         "origin": "cordova-plugin-device",
         "gitref": "",
         "paramvals": {},
         "sourceLocation": "plugins/cordova-plugin-device",
         "selectedState": "Included",
-        "checksum": "1eae5d64",
+        "checksum": "927290ca",
         "dependsOn": [],
         "topLevel": true,
         "permissions": {},
@@ -49,107 +57,91 @@
       {
         "id": "cordova-plugin-splashscreen",
         "name": "Splashscreen",
-        "version": "2.1.0",
+        "version": "3.2.0",
         "originType": "cordova.io",
         "origin": "cordova-plugin-splashscreen",
         "gitref": "",
         "paramvals": {},
         "sourceLocation": "plugins/cordova-plugin-splashscreen",
         "selectedState": "Included",
-        "checksum": "170efb68",
+        "checksum": "452a4659",
         "dependsOn": [],
         "topLevel": true,
         "permissions": {},
         "description": "Cordova Splashscreen Plugin",
         "data": {},
         "dependedBy": []
+      },
+      {
+        "id": "ionic-plugin-keyboard",
+        "name": "Keyboard",
+        "version": "2.0.1",
+        "originType": "cordova.io",
+        "origin": "ionic-plugin-keyboard",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/ionic-plugin-keyboard",
+        "selectedState": "Included",
+        "checksum": "b780418d",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {},
+        "description": "Ionic Keyboard Plugin",
+        "data": {},
+        "dependedBy": []
+      },
+      {
+        "id": "cordova-plugin-file",
+        "name": "File",
+        "version": "4.1.0",
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-file",
+        "gitref": "",
+        "paramvals": {},
+        "sourceLocation": "plugins/cordova-plugin-file",
+        "selectedState": "Included",
+        "checksum": "77b7c7b6",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.WRITE_EXTERNAL_STORAGE"
+          ]
+        },
+        "description": "Cordova File Plugin",
+        "data": {},
+        "dependedBy": []
       }
     ],
     "serviceMethods": [],
     "buildConfigurations": {
-      "Android": {
-        "platform_": "android",
-        "runtime_": "Cordova 3.x",
-        "name_": "Android",
-        "preferences_": {
-          "android-minSdkVersion": "14",
-          "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
-        },
-        "isActive_": true,
-        "appName_": "AgriBroka-Ionic-Parse-App",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appVersionCode_": "1",
-        "crosswalkVersion_": "14",
-        "cordovaCLIVersion_": "4.1.2"
-      },
-      "Android-Crosswalk": {
-        "platform_": "android",
-        "runtime_": "Crosswalk with Cordova 3.x",
-        "name_": "Android-Crosswalk",
-        "preferences_": {
-          "android-minSdkVersion": "14",
-          "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
-        },
-        "isActive_": true,
-        "appName_": "AgriBroka-Ionic-Parse-App",
-        "appID_": "not.yet.specified",
-        "appAccess_": {
-          "mode": "legacy",
-          "network": [
-            "*"
-          ],
-          "intents": [],
-          "navigation": []
-        },
-        "icons_": [],
-        "splashes_": [],
-        "addlPermissions_": "",
-        "excludedLibraries_": "",
-        "appVersion_": "0.0.1",
-        "appVersionCode_": "1",
-        "crosswalkVersion_": "14",
-        "cordovaCLIVersion_": "4.1.2"
-      },
       "iOS": {
         "platform_": "ios",
         "runtime_": "Cordova 3.x",
         "name_": "iOS",
         "preferences_": {
-          "ios-target": "6",
-          "ios-configuration": "adhoc"
+          "ios-configuration": "adhoc",
+          "deployment-target": "6"
         },
         "isActive_": true,
         "appName_": "AgriBroka-Ionic-Parse-App",
-        "appID_": "not.yet.specified",
+        "appID_": "ke.bws.agribroka",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
           "intents": [],
-          "navigation": []
+          "navigation": [],
+          "properties": {}
         },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.1",
-        "cordovaCLIVersion_": "4.1.2",
+        "cordovaCLIVersion_": "5.4.1",
         "iosProvs_": []
       },
       "Windows8": {
@@ -159,21 +151,23 @@
         "preferences_": {},
         "isActive_": true,
         "appName_": "AgriBroka-Ionic-Parse-App",
-        "appID_": "not.yet.specified",
+        "appID_": "ke.bws.agribroka",
         "appAccess_": {
-          "mode": "legacy",
+          "mode": "whitelist",
           "network": [
             "*"
           ],
           "intents": [],
-          "navigation": []
+          "navigation": [],
+          "properties": {}
         },
         "icons_": [],
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "4.1.2"
+        "cordovaCLIVersion_": "5.4.1"
       },
       "WebApp": {
         "platform_": "webapp",
@@ -195,6 +189,7 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Firefox": {
@@ -217,6 +212,7 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Chrome": {
@@ -239,6 +235,7 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "Facebook": {
@@ -261,6 +258,7 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.1"
       },
       "WP81": {
@@ -283,8 +281,43 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
+        "certificateId_": "",
         "appVersion_": "0.0.0.1",
-        "cordovaCLIVersion_": "4.1.2"
+        "cordovaCLIVersion_": "5.4.1"
+      },
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "AgriBroka",
+        "appID_": "ke.bws.agribroka",
+        "appAccess_": {
+          "mode": "whitelist",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": [],
+          "properties": {}
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "certificateId_": "",
+        "appVersion_": "0.0.1",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "16",
+        "cordovaCLIVersion_": "5.4.1",
+        "appAuthor_": "M. Nguthi",
+        "appDescription_": "An online market place for fresh farm produce"
       }
     }
   }

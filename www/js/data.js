@@ -9,25 +9,25 @@ angular.module('agribroka.data', [])
             title: 'Farm Profiles',
             icon: 'ion-calendar',
             note: 'Visit the farms',
-            url: '#/app/templates/news'
+            url: '#/app/news'
         },
         { 
             title: 'Products',
             icon: 'ion-ios-cart',
             note: 'Available produce',
-            url: '#/app/templates/products'
+            url: '#/app/feed'
         },
         { 
             title: 'Create Account',
             icon: 'ion-person-add',
             note: 'Join today',
-            url: '#/app/templates/gallery'
+            url: '#/app/signUp'
         },
         { 
             title: 'Login',
             icon: 'ion-home',
             note: 'Go to your account',
-            url: '#/app/templates/map'
+            href: '#/app/login'
         },
 
     ]; 
