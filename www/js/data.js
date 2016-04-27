@@ -27,7 +27,7 @@ angular.module('agribroka.data', [])
             title: 'Login',
             icon: 'ion-home',
             note: 'Go to your account',
-            href: '#/app/login'
+            url: '#/app/login()'
         },
 
     ]; 
