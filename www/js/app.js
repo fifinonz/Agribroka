@@ -54,7 +54,7 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data']
     .state('app', {
       url: "/app",
       abstract: true,
-      templateUrl: "templates/menu.html",
+      templateUrl: "templates/farmer_menu.html",
       controller: 'LoginCtrl'
     })
 
