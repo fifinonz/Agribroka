@@ -6,6 +6,8 @@
 // 'agribroka.controllers' is found in controllers.js
 angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data'])
 
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

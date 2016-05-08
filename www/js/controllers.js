@@ -56,6 +56,9 @@ angular.module('agribroka.controllers', [])
 .controller('SignUpCtrl', function($scope, $ionicModal, $timeout) {
 
 
+  // Intialize Parse application
+  Parse.initialize("jTvSONYT1KnJvGyhzSFGuYwIwWKiXoeS6DAueN5c", "KKI1prB0sao3o4MGTOtWCiQeWEPAe5f1tPWiy0Gw");
+
   // Form data for the Sign Up modal
   $scope.signUpData = {};
 
@@ -81,9 +84,25 @@ angular.module('agribroka.controllers', [])
     console.log('Signing Up...', $scope.signUpData);
 
     // Sign Up code 
-    $timeout(function() {
-      $scope.closeSignUp();
-    }, 1000);
+        var user = new Parse.User();
+    user.set("username", $scope.signUpData.username);
+    user.set("password", $scope.signUpData.password);
+    user.set("email", $scope.signUpData.email);
+    user.set("name", $scope.signUpData.first_name);
+    user.set("mobileNo", $scope.signUpData.mobileNo);
+
+  user.signUp(null, {
+    success: function(user) {
+      // Hooray! Let them use the app now.
+      alert("success!");
+          $state.go('app.feed');
+    },
+    error: function(user, error) {
+      // Show the error message somewhere and let the user try again.
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+
   }; // end Sign Up function
 
 
