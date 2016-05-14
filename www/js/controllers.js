@@ -53,7 +53,7 @@ angular.module('agribroka.controllers', [])
   };
 })
 
-.controller('SignUpCtrl', function($scope, $ionicModal, $timeout) {
+.controller('SignUpCtrl', function($scope, $state, $ionicModal, $timeout) {
 
 
   // Intialize Parse application
@@ -95,6 +95,7 @@ angular.module('agribroka.controllers', [])
     success: function(user) {
       // Hooray! Let them use the app now.
       alert("success!");
+          $scope.closeSignUp();
           $state.go('app.feed');
     },
     error: function(user, error) {
