@@ -1,6 +1,6 @@
 angular.module('agribroka.controllers', [])
 
-.controller('LoginCtrl', function($scope, $ionicModal, $timeout) {
+.controller('LoginCtrl', function($scope, $state, $ionicModal, $timeout) {
 
   //Sidemenu Links for showcasing all pages
 
@@ -42,15 +42,25 @@ angular.module('agribroka.controllers', [])
   };
 
   // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
+  $scope.doLogin = function () {
     console.log('Doing login', $scope.loginData);
 
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
+    // Login in using Parse User Account
+    // 
+      Parse.User.logIn($scope.loginData.username, $scope.loginData.password , {
+     
+          success: function(user) {
+      // Hooray! Let them use the app now.
+          alert("success!");
+          $scope.closeLogin;
+          $state.go('app.feed');
+    },
+    error: function(user, error) {
+      // Show the error message somewhere and let the user try again.
+      alert("Error: " + error.code + " " + error.message);
+    }
+  });
+  }; // end doLogin
 })
 
 .controller('SignUpCtrl', function($scope, $state, $ionicModal, $timeout) {
