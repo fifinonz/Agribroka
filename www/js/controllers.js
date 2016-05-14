@@ -88,7 +88,8 @@ angular.module('agribroka.controllers', [])
     user.set("username", $scope.signUpData.username);
     user.set("password", $scope.signUpData.password);
     user.set("email", $scope.signUpData.email);
-    user.set("name", $scope.signUpData.first_name);
+    user.set("first_name", $scope.signUpData.first_name);
+    user.set("last_name", $scope.signUpData.last_name);
     user.set("mobileNo", $scope.signUpData.mobileNo);
 
   user.signUp(null, {

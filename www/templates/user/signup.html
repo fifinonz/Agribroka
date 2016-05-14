@@ -14,8 +14,12 @@
     <form ng-submit="doSignUp()" class="gem-form">
       <div class="list">
       <label class="item item-input">
-          <span class="input-label">Full Name</span>
-          <input type="text" ng-model="signUpData.name" placeholder="First and Last name">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="signUpData.first_name" placeholder="First name">
+        </label>
+      <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="signUpData.last_name" placeholder="Last name">
         </label>
       <label class="item item-input">
           <span class="input-label">Email</span>
