@@ -11,6 +11,13 @@ angular.module('agribroka.data', [])
             note: 'Visit the farms',
             url: '#/app/news'
         },
+
+        { 
+            title: 'Create Account',
+            icon: 'ion-person-add',
+            note: 'Join today',
+            url: 'signUp()'
+        },
         { 
             title: 'Products',
             icon: 'ion-ios-cart',
@@ -18,16 +25,10 @@ angular.module('agribroka.data', [])
             url: '#/app/feed'
         },
         { 
-            title: 'Create Account',
-            icon: 'ion-person-add',
-            note: 'Join today',
-            url: '#/app/signUp'
-        },
-        { 
             title: 'Login',
             icon: 'ion-home',
             note: 'Go to your account',
-            url: '#/app/login()'
+            url: 'login()'
         },
 
     ]; 

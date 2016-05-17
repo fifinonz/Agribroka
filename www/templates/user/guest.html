@@ -22,11 +22,11 @@
             </div>
 
             <div class="card col home">
-                <a class="item item-text-wrap" href="{{items[$index + 1].url}}">
+                <button class="item item-text-wrap" ng-click="{{items[$index + 1].url}}">
                     <h1><i class="icon {{items[$index + 1].icon}}"></i></h1>
                     <h2>{{items[$index + 1].title}}</h2>
                     <span class="item-note">{{items[$index + 1].note}}</span>
-                </a>
+                </button>
             </div>
 
         </div>

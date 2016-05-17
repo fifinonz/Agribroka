@@ -119,7 +119,7 @@ angular.module('agribroka.controllers', [])
 
 })
 // Guest Controller
-.controller('GuestCtrl', function($scope, Data) {
+.controller('GuestCtrl', function($scope, Data, $state) {
   $scope.items = Data.items;
 })
 
