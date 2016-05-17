@@ -10,20 +10,19 @@
              <h3 class="form-sub-title text-center">Select An Account Type Below</h3>
             </div>
           </div>
-    <form ng-submit="selectAcc()" class="gem-form">
+    <form ng-submit="createProfile()" class="gem-form">
       <div class="list">
         <label class="item">
           <h1 class="form-sub-title text-center">Account Type</h1>
         </label>
         <!-- Account Types -->
           <h3 class="text-center"><input type="radio" name="accType" value="farmer" ng-model="accTypeData.type" checked>Farmer</h2><br>
-          <h3 class="text-center"><input type="radio" name="accType" value="buyer" ng-model="accTypeData.type" checked>Buyer<br></h2>
+          <h3 class="text-center"><input type="radio" name="accType" value="buyer" ng-model="accTypeData.type" >Buyer<br></h2>
 
       <label class="item">
-        <button class="button button-block button-positive" ng-controller="AccTypeCtrl" ng-click="createProfile()">Create</button>
+        <button class="button button-block button-positive" type="submit">Create</button>
       </label>
       </div>
-      </div>
-    </form>
+      </form>
   </ion-content>
 </div>

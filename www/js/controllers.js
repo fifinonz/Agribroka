@@ -126,9 +126,13 @@ $scope.$on('$destroy', function() {
     success: function(user) {
       // Hooray! Let User create profile
       alert("success!");
-      Parse.User.logIn($scope.signUpData.username, $scope.signUpData.password){
+      Parse.User.logIn($scope.signUpData.username, $scope.signUpData.password, {
+
+
         // check for succesful login
         success: function(user){
+          console.log('Doing login', $scope.signUpData.username);
+          alert("logged in");
           $timeout(function() {
           $scope.closeSignUp();
           $scope.accountType();
@@ -138,16 +142,17 @@ $scope.$on('$destroy', function() {
         // Show the error message somewhere
         alert("Error: " + error.code + " " + error.message);
       }
+    }); //end login
 
-          },
+  }, // end succesful signUp
     error: function(user, error) {
       // Show the error message somewhere and let the user try again.
       alert("Error: " + error.code + " " + error.message);
     }
 
-  });
+  }); // end user signup
 
-  }; // end Sign Up function
+}; // end doSignUp function
 
 
 })
@@ -167,9 +172,9 @@ $scope.$on('$destroy', function() {
   $scope.createProfile = function() {
     console.log('creatingProfile...', $scope.accTypeData);
 
-    // Sign Up code
+    // Account Type
         var accType = new Parse.Object.extend("Account");
-        accType.set("accType", "scope.accTypeData.type");
+        accType.set("accType", $scope.accTypeData.type);
         accType.set("user",user); // only works if user is logged in
 
   accType.save(null, {
