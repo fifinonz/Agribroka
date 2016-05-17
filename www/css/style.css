@@ -308,3 +308,45 @@ border-top: 1px solid rgba(0, 0, 0, 0.2);}
     /* close commented backslash hack */
 
       
+/******************************************
+  ADD YOUR CUSTOM STYLES HERE
+/******************************************/
+
+/******************************************
+  
+******************************************/
+.space {
+    margin: 20px 0;
+}
+
+.uploaditem {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    font-size: 14px;
+color: #727272;
+letter-spacing: 0.3px;
+line-height: 28px;
+font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, 
+}
+.uploaditem label {
+    display: block;
+}
+.uploaditem .form-control {
+    box-shadow: none !important;
+    border-color: #d7dadd !important;
+    height: 37px;
+    border-radius: 0 !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #387ef5;
+    background-image: none;
+    border: 1px solid #ccc;
+  }

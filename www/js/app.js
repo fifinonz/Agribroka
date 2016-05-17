@@ -40,6 +40,12 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data']
                 templateUrl: "templates/user/signUp.html",
                 controller: "SignUpCtrl"
             }) 
+    // Create Profile
+            .state('app-profile',{
+              url:"/newProfile",
+              templateUrl:"templates/user/edit-account.html",
+             // controller:"ProfileCtrl"
+            })
 
     // Guest Session
         .state('app.guest', {

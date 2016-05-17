@@ -52,8 +52,8 @@ angular.module('agribroka.controllers', [])
           success: function(user) {
       // Hooray! Let them use the app now.
           alert("success!");
-          $scope.closeLogin;
-          $state.go('app.feed');
+          $scope.closeLogin();
+
     },
     error: function(user, error) {
       // Show the error message somewhere and let the user try again.
@@ -107,8 +107,7 @@ angular.module('agribroka.controllers', [])
       // Hooray! Let them use the app now.
       alert("success!");
           $scope.closeSignUp();
-          $state.go('app.feed');
-    },
+          $state.go('app-profile');    },
     error: function(user, error) {
       // Show the error message somewhere and let the user try again.
       alert("Error: " + error.code + " " + error.message);
