@@ -19,7 +19,7 @@ angular.module('agribroka.controllers', [])
   //   {text: 'Profile 3', url: '#/app/profilethree'},
   //   {text: 'Invite', url: '#/app/invite'},
   //   {text: 'News', url: '#/app/news'}
-  // ]; 
+  // ];
 
   // Form data for the login modal
   $scope.loginData = {};
@@ -46,9 +46,9 @@ angular.module('agribroka.controllers', [])
     console.log('Doing login', $scope.loginData);
 
     // Login in using Parse User Account
-    // 
+    //
       Parse.User.logIn($scope.loginData.username, $scope.loginData.password , {
-     
+
           success: function(user) {
       // Hooray! Let them use the app now.
           alert("success!");
@@ -69,6 +69,8 @@ angular.module('agribroka.controllers', [])
   // Intialize Parse application
   Parse.initialize("jTvSONYT1KnJvGyhzSFGuYwIwWKiXoeS6DAueN5c", "KKI1prB0sao3o4MGTOtWCiQeWEPAe5f1tPWiy0Gw");
 
+
+
   // Form data for the Sign Up modal
   $scope.signUpData = {};
 
@@ -76,24 +78,42 @@ angular.module('agribroka.controllers', [])
   $ionicModal.fromTemplateUrl('templates/user/signUp.html', {
     scope: $scope
   }).then(function(modal) {
-    $scope.modal = modal;
+    $scope.modal1 = modal;
   });
 
   // Triggered in the Sign Up modal to close it
   $scope.closeSignUp = function() {
-    $scope.modal.hide();
+    $scope.modal1.hide();
   };
+  // Cleanup the modal when we're done with it!
+$scope.$on('$destroy', function() {
+  $scope.modal1.remove();
+});
 
   // Open the Sign Up modal
   $scope.signUp = function() {
-    $scope.modal.show();
+    $scope.modal1.show();
+  };
+
+
+  // Create the Account modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/user/account-type.html', {
+  scope: $scope,
+  animation: 'slide-in-up'
+  }).then(function(modal) {
+  $scope.modal2 = modal;
+  });
+
+  // Open the Account Type modal
+  $scope.accountType = function() {
+  $scope.modal2.show();
   };
 
   // Perform the Sign Up action when the user submits the Sign Up form
   $scope.doSignUp = function() {
     console.log('Signing Up...', $scope.signUpData);
 
-    // Sign Up code 
+    // Sign Up code
         var user = new Parse.User();
     user.set("username", $scope.signUpData.username);
     user.set("password", $scope.signUpData.password);
@@ -104,22 +124,72 @@ angular.module('agribroka.controllers', [])
 
   user.signUp(null, {
     success: function(user) {
-      // Hooray! Let them use the app now.
+      // Hooray! Let User create profile
       alert("success!");
+      Parse.User.logIn($scope.signUpData.username, $scope.signUpData.password){
+        // check for succesful login
+        success: function(user){
+          $timeout(function() {
           $scope.closeSignUp();
-          $state.go('app-profile');    },
+          $scope.accountType();
+        }, 1000);
+      },
+      error: function(user, error) {
+        // Show the error message somewhere
+        alert("Error: " + error.code + " " + error.message);
+      }
+
+          },
     error: function(user, error) {
       // Show the error message somewhere and let the user try again.
       alert("Error: " + error.code + " " + error.message);
     }
+
   });
 
   }; // end Sign Up function
 
 
 })
+
 // Guest Controller
 .controller('GuestCtrl', function($scope, Data, $state) {
   $scope.items = Data.items;
 })
 
+// Account Type Controller
+.controller('AccTypeCtrl', function($scope, $state, $ionicModal, $timeout) {
+
+  // Form data for the Account type modal
+  $scope.accTypeData = {};
+
+  // Create Profile based on account type
+  $scope.createProfile = function() {
+    console.log('creatingProfile...', $scope.accTypeData);
+
+    // Sign Up code
+        var accType = new Parse.Object.extend("Account");
+        accType.set("accType", "scope.accTypeData.type");
+        accType.set("user",user); // only works if user is logged in
+
+  accType.save(null, {
+    success: function(accType) {
+      // Hooray! Account Type set
+      alert("success!");
+      if ($scope.accTypeData.type="farmer") {
+          $state.go('app-profile');
+      } else {
+        alert("buyer");
+      }
+          },
+    error: function(accType, error) {
+      // Show the error message somewhere and let the user try again.
+      alert("Error: " + error.code + " " + error.message);
+    }
+
+  });
+
+}; // Account Type function
+
+
+})// end of Account Type controller

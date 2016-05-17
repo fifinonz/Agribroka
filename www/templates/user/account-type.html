@@ -6,24 +6,24 @@
  <ion-content class="padding">
   <div class="row form-heading">
       <div class="col">
-            <h1 class="form-title" style="text-align: center;">Welcome</h1>   
-             <h3 class="form-sub-title">Select An Account Type Below</h3>  
+            <h1 class="form-title" style="text-align: center;">Welcome</h1>
+             <h3 class="form-sub-title text-center">Select An Account Type Below</h3>
             </div>
-          </div>     
-    <form ng-submit="createProfile()" class="gem-form">
+          </div>
+    <form ng-submit="selectAcc()" class="gem-form">
       <div class="list">
-      <label class="item item-input item-select">
-        <div class="input-label">
-          Account Type
-        </div>
-        <select>
-          <option>Farmer</option>
-          <option selected>Buyer</option>
-        </select>
+        <label class="item">
+          <h1 class="form-sub-title text-center">Account Type</h1>
+        </label>
+        <!-- Account Types -->
+          <h3 class="text-center"><input type="radio" name="accType" value="farmer" ng-model="accTypeData.type" checked>Farmer</h2><br>
+          <h3 class="text-center"><input type="radio" name="accType" value="buyer" ng-model="accTypeData.type" checked>Buyer<br></h2>
+
+      <label class="item">
+        <button class="button button-block button-positive" ng-controller="AccTypeCtrl" ng-click="createProfile()">Create</button>
       </label>
-        </div>
+      </div>
       </div>
     </form>
   </ion-content>
 </div>
-
