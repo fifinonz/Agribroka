@@ -109,6 +109,15 @@ $scope.$on('$destroy', function() {
   $scope.modal2.show();
   };
 
+  // Triggered to close modal
+  $scope.closeAccType = function() {
+    $scope.modal2.hide();
+  };
+  // Cleanup the modal when we're done with it!
+$scope.$on('$destroy', function() {
+  $scope.modal2.remove();
+});
+
   // Perform the Sign Up action when the user submits the Sign Up form
   $scope.doSignUp = function() {
     console.log('Signing Up...', $scope.signUpData);
@@ -155,16 +164,6 @@ $scope.$on('$destroy', function() {
 }; // end doSignUp function
 
 
-})
-
-// Guest Controller
-.controller('GuestCtrl', function($scope, Data, $state) {
-  $scope.items = Data.items;
-})
-
-// Account Type Controller
-.controller('AccTypeCtrl', function($scope, $state, $ionicModal, $timeout) {
-
   // Form data for the Account type modal
   $scope.accTypeData = {};
 
@@ -172,20 +171,29 @@ $scope.$on('$destroy', function() {
   $scope.createProfile = function() {
     console.log('creatingProfile...', $scope.accTypeData);
 
-    // Account Type
-        var accType = new Parse.Object.extend("Account");
-        accType.set("accType", $scope.accTypeData.type);
-        accType.set("user",user); // only works if user is logged in
+        // Account Type
+        // create a new sub-class of Parse.Object
+        var AccountType = Parse.Object.extend("Account");
 
-  accType.save(null, {
-    success: function(accType) {
-      // Hooray! Account Type set
-      alert("success!");
-      if ($scope.accTypeData.type="farmer") {
-          $state.go('app-profile');
-      } else {
-        alert("buyer");
-      }
+        // create a new class instance
+        var accType = new AccountType();
+        accType.set("accType", $scope.accTypeData.type);
+
+        // add account type to user
+        var userID = Parse.User.current();
+        accType.set("userID",userID); // only works if user is logged in
+
+        accType.save(null, {
+          success: function(accType) {
+              // Hooray! Account Type set
+              alert("success!");
+              if ($scope.accTypeData.type=='farmer') {
+                $scope.closeAccType();
+                $state.go('app-profile');
+              }
+              else {
+                alert("buyer");
+              }
           },
     error: function(accType, error) {
       // Show the error message somewhere and let the user try again.
@@ -196,5 +204,9 @@ $scope.$on('$destroy', function() {
 
 }; // Account Type function
 
+})
 
-})// end of Account Type controller
+// Guest Controller
+.controller('GuestCtrl', function($scope, Data, $state) {
+  $scope.items = Data.items;
+})
