@@ -193,7 +193,8 @@ $scope.$on('$destroy', function() {
               }
               else {
                 alert("buyer");
-                $state.go('app-bprofile')
+                $scope.closeAccType();
+                $state.go('app-bprofile');
               }
           },
     error: function(accType, error) {
