@@ -189,10 +189,11 @@ $scope.$on('$destroy', function() {
               alert("success!");
               if ($scope.accTypeData.type=='farmer') {
                 $scope.closeAccType();
-                $state.go('app-profile');
+                $state.go('app-fprofile');
               }
               else {
                 alert("buyer");
+                $state.go('app-bprofile')
               }
           },
     error: function(accType, error) {
@@ -204,7 +205,7 @@ $scope.$on('$destroy', function() {
 
 }; // Account Type function
 
-// createProfile
+// create Farm Profile
  $scope.farmProfileData = {};
 
 $scope.farmProfile = function() {
@@ -246,7 +247,45 @@ $scope.farmProfile = function() {
 
 });
 
-}; // Account Profile function
+}; // Farm Profile function
+
+
+// Form data for buyer profile
+$scope.buyerProfileData = {};
+
+// Create Profile based on account type
+$scope.buyerProfile = function() {
+  console.log('creatingProfile...', $scope.buyerProfileData);
+
+
+      // create a new sub-class of Parse.Object
+      var BuyerProfile = Parse.Object.extend("BuyerProfile");
+
+      // create a new class instance
+      var buyer = new BuyerProfile();
+      buyer.set("paymentMethod", $scope.buyerProfileData.payment);
+      buyer.set("buyerLocation", $scope.buyerProfileData.buyerlocation);
+      buyer.set("buyerDescr", $scope.buyerProfileData.buyerDescr);
+
+      // add buyer profile to user
+      var buyerID = Parse.User.current();
+      buyer.set("buyerID",buyerID); // only works if user is logged in
+
+      buyer.save(null, {
+        success: function(buyer) {
+            // Hooray! Account Type set
+            alert("success!");
+            }
+        },
+  error: function(buyer, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+
+});
+
+}; // Account Type function
+
 
 })
 
