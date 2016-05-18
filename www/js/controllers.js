@@ -221,6 +221,7 @@ $scope.farmProfile = function() {
       farm.set("farmName", $scope.farmProfileData.farmName);
       farm.set("farmSize", $scope.farmProfileData.farmSize);
       farm.set("farmDescr", $scope.farmProfileData.farmDescr);
+      farm.set("tagLine", $scope.farmProfileData.tagLine);
       farm.set("farmAreaCode", $scope.farmProfileData.farmAreaCode);
 
       // add account type to user
