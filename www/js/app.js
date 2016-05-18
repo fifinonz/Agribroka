@@ -33,18 +33,18 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data']
                 url: "/login",
                 templateUrl: "templates/user/login.html",
                 controller: "LoginCtrl"
-            })    
+            })
     // Create Account
             .state('app-signUp', {
                 url: "/signUp",
                 templateUrl: "templates/user/signUp.html",
                 controller: "SignUpCtrl"
-            }) 
+            })
     // Create Profile
             .state('app-profile',{
               url:"/newProfile",
-              templateUrl:"templates/user/edit-account.html",
-             // controller:"ProfileCtrl"
+              templateUrl:"templates/user/edit-FarmerAcc.html",
+              controller:"SignUpCtrl"
             })
 
     // Guest Session
@@ -118,7 +118,7 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data']
           templateUrl: "templates/social/send-email.html"
         }
       }
-    })    
+    })
 
     .state('app.profile', {
       url: "/profile",
@@ -213,4 +213,3 @@ angular.module('agribroka', ['ionic', 'agribroka.controllers', 'agribroka.data']
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/start');
 });
-

@@ -204,6 +204,50 @@ $scope.$on('$destroy', function() {
 
 }; // Account Type function
 
+// createProfile
+ $scope.farmProfileData = {};
+
+$scope.farmProfile = function() {
+  console.log('Farm Profile...', $scope.farmProfileData);
+
+      //
+      // create a new sub-class of Parse.Object
+      var FarmProfile = Parse.Object.extend("FarmProfile");
+
+      // create a new class instance
+      var farm = new FarmProfile();
+      farm.set("farmName", $scope.farmProfileData.farmName);
+      farm.set("farmSize", $scope.farmProfileData.farmSize);
+      farm.set("farmDescr", $scope.farmProfileData.farmDescr);
+      farm.set("farmAreaCode", $scope.farmProfileData.farmAreaCode);
+
+      // add account type to user
+      var farmerID = Parse.User.current();
+      farm.set("farmerID",farmerID); // only works if user is logged in
+
+          // get location
+          // Save location
+            var location = new Parse.GeoPoint.current({
+              success: function(point){
+                farmProfile.set("farmLocation",location);
+                console.log(point);
+              }
+            });
+
+      farm.save(null, {
+        success: function(farm) {
+            // Hooray! Profile saved
+            alert("success!");
+        },
+  error: function(farm, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+
+});
+
+}; // Account Profile function
+
 })
 
 // Guest Controller
