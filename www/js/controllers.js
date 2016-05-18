@@ -275,14 +275,12 @@ $scope.buyerProfile = function() {
         success: function(buyer) {
             // Hooray! Account Type set
             alert("success!");
-            }
-        },
-  error: function(buyer, error) {
-    // Show the error message somewhere and let the user try again.
-    alert("Error: " + error.code + " " + error.message);
-  }
-
-});
+          },
+            error: function(buyer, error) {
+            // Show the error message somewhere and let the user try again.
+            alert("Error: " + error.code + " " + error.message);
+          }
+        });
 
 }; // Account Type function
 
