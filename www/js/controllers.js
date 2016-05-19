@@ -949,7 +949,18 @@ $scope.buyerProfile = function() {
       // add buyer profile to user
       var buyerID = Parse.User.current();
       buyer.set("buyerID",buyerID); // only works if user is logged in
+      var options = { enableHighAccuracy: true };
+      navigator.geolocation.getCurrentPosition(function(position) {
 
+//      Add buyer geocode
+        var point = new Parse.GeoPoint({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude});
+          buyer.set("buyerGeo",point);
+
+          }, function(error) {
+          alert('Unable to get location: ' + error.message);
+          }, options);
       buyer.save(null, {
         success: function(buyer) {
             // Hooray! Account Type set
