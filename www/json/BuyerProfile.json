@@ -1,0 +1,172 @@
+{ "results": [
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "KiXVGLpOlx"
+        },
+        "buyerLocation": "Githurai",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-a904acc8-68cf-43d6-b830-4759c6b48252-buyer9.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-a904acc8-68cf-43d6-b830-4759c6b48252-buyer9.jpg"
+        },
+        "createdAt": "2016-05-18T16:58:00.175Z",
+        "objectId": "86ZNP05ukB",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:39:01.284Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "DgvLHOeCUZ"
+        },
+        "buyerLocation": "Juja",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-a042aca4-ffa4-4e75-b01d-746c6e8d90dc-buyer6.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-a042aca4-ffa4-4e75-b01d-746c6e8d90dc-buyer6.jpg"
+        },
+        "createdAt": "2016-05-18T16:55:47.487Z",
+        "objectId": "A6wdC9Zrfy",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:29:18.391Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "Uzk9UsZyib"
+        },
+        "buyerLocation": "Nairobi",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-ac875839-91fa-4265-be27-4f0a52e7b796-buyer5.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-ac875839-91fa-4265-be27-4f0a52e7b796-buyer5.jpg"
+        },
+        "createdAt": "2016-05-18T16:58:50.928Z",
+        "objectId": "FiHzE7x3JM",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:32:34.761Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "zS5OcIOk7n"
+        },
+        "buyerLocation": "Githurai",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-fe785d7f-93af-410a-8851-208cf6ba602a-buyer4.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-fe785d7f-93af-410a-8851-208cf6ba602a-buyer4.jpg"
+        },
+        "createdAt": "2016-05-18T16:54:41.869Z",
+        "objectId": "IuzJxjeeEZ",
+        "paymentMethod": "cash",
+        "updatedAt": "2016-05-19T07:28:51.035Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "gAYGoQu5pi"
+        },
+        "buyerLocation": "Kikuyu",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-0cbbad51-40b6-4649-b88f-4bf312c8b999-buyer3.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-0cbbad51-40b6-4649-b88f-4bf312c8b999-buyer3.jpg"
+        },
+        "createdAt": "2016-05-18T16:58:27.147Z",
+        "objectId": "NbIK3qd29A",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:30:23.796Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "GACszwFsO6"
+        },
+        "buyerLocation": "Nairobi",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-7126de35-b7b1-4789-bc89-2aa5b4392ecb-buyer10.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-7126de35-b7b1-4789-bc89-2aa5b4392ecb-buyer10.jpg"
+        },
+        "createdAt": "2016-05-18T16:59:35.269Z",
+        "objectId": "PD3RpDr5VT",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:31:51.823Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "xcZ35Fkfpy"
+        },
+        "buyerLocation": "Thika",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-3f682d8e-b341-4adf-961e-73e92cf3f0b9-buyer7.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-3f682d8e-b341-4adf-961e-73e92cf3f0b9-buyer7.jpg"
+        },
+        "createdAt": "2016-05-18T16:57:29.387Z",
+        "objectId": "cFUpLZsOVU",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:33:01.677Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "QP7Rvlgrj7"
+        },
+        "buyerLocation": "Kandara",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-46c0e318-6626-433b-be45-d593952517e0-buyer2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-46c0e318-6626-433b-be45-d593952517e0-buyer2.jpg"
+        },
+        "createdAt": "2016-05-18T16:55:24.019Z",
+        "objectId": "lT3zhOafi6",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:29:46.231Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "W6E4e37jjl"
+        },
+        "buyerLocation": "Thika",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-fa8d631e-13ba-4251-a406-7ae118fb014c-buyer1.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-fa8d631e-13ba-4251-a406-7ae118fb014c-buyer1.jpg"
+        },
+        "createdAt": "2016-05-18T16:56:10.112Z",
+        "objectId": "v79g8m01dU",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:33:30.965Z"
+    },
+	{
+        "buyerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "aOQKfXXl4B"
+        },
+        "buyerLocation": "Kikuyu",
+        "buyerPic": {
+            "__type": "File",
+            "name": "tfss-067a8259-d8f4-4bb2-bbcd-8af4826947d2-buyer8.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-067a8259-d8f4-4bb2-bbcd-8af4826947d2-buyer8.jpg"
+        },
+        "createdAt": "2016-05-18T16:55:09.035Z",
+        "objectId": "wPlXwaConG",
+        "paymentMethod": "mpesa",
+        "updatedAt": "2016-05-19T07:31:12.216Z"
+    }
+] }

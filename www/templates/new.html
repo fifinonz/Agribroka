@@ -1,12 +1,15 @@
-<ion-view title="{{new.title}}">
+<ion-view title="{{new.farmName}}">
     <ion-content class="has-header">
 
-        <img ng-src="{{new.picture}}" alt="{{new.title}}"/>
-        
+        <img ng-src="{{new.profilePic.url}}" alt="{{new.farmName}}"/>
+
         <div class="padding">
-        <h2 class="title">{{new.title}}</h2>
-        <p>{{new.body}}</p>
-        <p><i class="icon ion-pricetags"></i> <span ng-repeat="tag in new.tags">{{tag}}{{$last ? '' : ', '}}</span></p>
+        <h2 class="title">{{new.farmName}}</h2>
+        <h3>{{new.farmSize}}</h3>
+        <h4>{{new.farmAreacode}}</h4>
+        <p><i>{{new.tagLine}}</i></p>
+        <br>
+        <p>{{new.farmDescr}}</p>
         </div>
 
     </ion-content>

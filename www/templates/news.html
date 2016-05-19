@@ -1,18 +1,17 @@
-<ion-view title="News">
+<ion-view title="Farm Profiles">
     <ion-content class="has-header">
-        
+
         {{storage}}
-        
+
         <div class="list">
 
-            <a class="item" ng-class="{'item-thumbnail-left' : new.picture}" href="#/app/news/{{$index}}" ng-repeat="new in news">
-                <img ng-src="{{new.picture}}" alt="{{new.title}}">
-                
-                <h2>{{new.title}}</h2>
-                <p>{{new.body}}</p>
+            <a class="item" ng-class="{'item-thumbnail-left' : new.profilePic}" href="#/app/news/{{$index}}" ng-repeat="new in news">
+                <img ng-src="{{new.profilePic.url}}" alt="{{new.farmName}}">
+
+                <h2>{{new.farmName}}</h2>
             </a>
 
         </div>
-       
+
     </ion-content>
 </ion-view>

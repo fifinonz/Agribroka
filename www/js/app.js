@@ -17,18 +17,18 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-      
+
     // Open any external link with InAppBrowser Plugin
     $(document).on('click', 'a[href^=http], a[href^=https]', function(e){
 
         e.preventDefault();
-        var $this = $(this); 
+        var $this = $(this);
         var target = $this.data('inAppBrowser') || '_blank';
 
         window.open($this.attr('href'), target);
 
     });
-      
+
     // Initialize Push Notifications
     var initPushwoosh = function() {
         var pushNotification = window.plugins.pushNotification;
@@ -40,21 +40,21 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
             registerPushwooshIOS();
         }
     }
-    
+
     // Uncomment the following initialization when you have made the appropriate configuration for iOS - http://goo.gl/YKQL8k and for Android - http://goo.gl/SPGWDJ
     // initPushwoosh();
-      
+
   });
-    
+
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    
+
     // $ionicConfigProvider
     // http://ionicframework.com/docs/api/provider/%24ionicConfigProvider/
     $ionicConfigProvider.tabs.position('bottom');
     $ionicConfigProvider.navBar.alignTitle('center');
-    
+
     $stateProvider
 
         // Login
@@ -139,7 +139,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.youtubevideos', {
       url: "/youtubevideos",
       views: {
@@ -188,7 +188,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
           controller: 'GalleryCtrl'
         }
       }
-    }) 
+    })
 
     .state('app.map', {
       url: "/map",
@@ -307,7 +307,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.feeds-refresher', {
       url: "/feeds-refresher",
       views: {
@@ -317,7 +317,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.feed-categories', {
       url: "/feed-categories",
       views: {
@@ -337,7 +337,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.feed-master', {
       url: "/feed-master/:categoryId/:id",
       views: {
@@ -347,7 +347,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.feed-detail', {
       url: "/feed-detail/:id",
       views: {
@@ -357,7 +357,7 @@ angular.module('mobionicApp', ['ionic', 'mobionicApp.controllers', 'mobionicApp.
         }
       }
     })
-    
+
     .state('app.plugins', {
       url: "/plugins",
       views: {

@@ -434,3 +434,6 @@ font-family: "Roboto", "Helvetica Neue", Helvetica, Arial,
     background-image: none;
     border: 1px solid #ccc;
   }
+  em,i{
+      font-style:italic;
+  }

@@ -766,28 +766,6 @@ $scope.$on('$destroy', function() {
   };
 
 
-  // Create the Account modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/user/account-type.html', {
-  scope: $scope,
-  animation: 'slide-in-up'
-  }).then(function(modal) {
-  $scope.modal2 = modal;
-  });
-
-  // Open the Account Type modal
-  $scope.accountType = function() {
-  $scope.modal2.show();
-  };
-
-  // Triggered to close modal
-  $scope.closeAccType = function() {
-    $scope.modal2.hide();
-  };
-  // Cleanup the modal when we're done with it!
-$scope.$on('$destroy', function() {
-  $scope.modal2.remove();
-});
-
   // Perform the Sign Up action when the user submits the Sign Up form
   $scope.doSignUp = function() {
     console.log('Signing Up...', $scope.signUpData);
@@ -800,7 +778,7 @@ $scope.$on('$destroy', function() {
     user.set("first_name", $scope.signUpData.first_name);
     user.set("last_name", $scope.signUpData.last_name);
     user.set("mobileNo", $scope.signUpData.mobileNo);
-
+    user.set("accType", $scope.signUpData.accType);
   user.signUp(null, {
     success: function(user) {
       // Hooray! Let User create profile
@@ -814,7 +792,11 @@ $scope.$on('$destroy', function() {
           alert("logged in");
           $timeout(function() {
           $scope.closeSignUp();
-          $scope.accountType();
+          if ($scope.signUpData.accType=='farmer') {
+              $state.go('app-fprofile');
+          } else {
+            $state.go('app-bprofile');
+          }
         }, 1000);
       },
       error: function(user, error) {
@@ -833,48 +815,6 @@ $scope.$on('$destroy', function() {
 
 }; // end doSignUp function
 
-
-  // Form data for the Account type modal
-  $scope.accTypeData = {};
-
-  // Create Profile based on account type
-  $scope.createProfile = function() {
-    console.log('creatingProfile...', $scope.accTypeData);
-
-        // Account Type
-        // create a new sub-class of Parse.Object
-        var AccountType = Parse.Object.extend("Account");
-
-        // create a new class instance
-        var accType = new AccountType();
-        accType.set("accType", $scope.accTypeData.type);
-
-        // add account type to user
-        var userID = Parse.User.current();
-        accType.set("userID",userID); // only works if user is logged in
-
-        accType.save(null, {
-          success: function(accType) {
-              // Hooray! Account Type set
-              alert("success!");
-              if ($scope.accTypeData.type=='farmer') {
-                $scope.closeAccType();
-                $state.go('app-fprofile');
-              }
-              else {
-                alert("buyer");
-                $scope.closeAccType();
-                $state.go('app-bprofile');
-              }
-          },
-    error: function(accType, error) {
-      // Show the error message somewhere and let the user try again.
-      alert("Error: " + error.code + " " + error.message);
-    }
-
-  });
-
-}; // Account Type function
 
 // create Farm Profile
  $scope.farmProfileData = {};

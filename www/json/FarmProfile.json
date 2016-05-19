@@ -1,0 +1,229 @@
+{ "id": 1,
+	"total": 11,
+	"result": [
+	{			"id":1,
+        "createdAt": "2016-05-18T16:26:07.317Z",
+        "farmAreaCode": "Wendani",
+        "farmDescr": "Wendani Farmers is a farmers Society in Wendani. It comprises of 20 farms of various sizes. We pool our resources to enable us to produce quality products and to reach a wider market.",
+        "farmName": "Wendani Farmers",
+        "farmSize": "50 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "QZJpolqYcE"
+        },
+        "objectId": "9YOYVKOb4H",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-3592e8ab-f797-4fc5-a72a-45e45ffebe26-farm8_2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-3592e8ab-f797-4fc5-a72a-45e45ffebe26-farm8_2.jpg"
+        },
+        "tagLine": "Farmers you can depend on",
+        "updatedAt": "2016-05-19T06:58:12.424Z"
+    },
+	{			"id":2,
+        "createdAt": "2016-05-18T16:27:34.091Z",
+        "farmAreaCode": "Kandara",
+        "farmDescr": "We have been in the business for 15 years. We grow quality produce in large quantities",
+        "farmName": "Harvest Plenty",
+        "farmSize": "30 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "kCcZZ6yTjI"
+        },
+        "objectId": "GgDmu09OK5",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-129419ec-edd2-46c6-bce6-ca549187ad01-farm10.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-129419ec-edd2-46c6-bce6-ca549187ad01-farm10.jpg"
+        },
+        "tagLine": "Produce always available",
+        "updatedAt": "2016-05-19T06:58:42.385Z"
+    },
+	{			"id":3,
+        "createdAt": "2016-05-18T16:28:55.645Z",
+        "farmAreaCode": "Kinoo",
+        "farmDescr": "Smart Farms is owned by a group of young entrepreneurs. We have embraced greenhouse technology to have modern farming.",
+        "farmName": "Smart Farms",
+        "farmSize": "3 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "0jYNTQbIO1"
+        },
+        "objectId": "Jz6i6pfxsJ",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-d7080598-d261-4067-b09b-88fa1b4f7d5c-farm3_2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-d7080598-d261-4067-b09b-88fa1b4f7d5c-farm3_2.jpg"
+        },
+        "tagLine": "Embracing tech in farming",
+        "updatedAt": "2016-05-19T06:57:06.501Z"
+    },
+	{			"id":4,
+        "createdAt": "2016-05-18T16:27:52.228Z",
+        "farmAreaCode": "kikuyu",
+        "farmDescr": "Little Growers is just as the name suggests, a small farm in the heart of Kiukuyu. But don't be fooled, there is nothing small about about the size and quality of our produce",
+        "farmName": "Little Growers",
+        "farmSize": "1 acre",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "47zduwKASE"
+        },
+        "objectId": "TvVA7ZtAv6",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-1789f27e-acc0-4b75-8aec-f9ea814ed2b8-farm5_2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-1789f27e-acc0-4b75-8aec-f9ea814ed2b8-farm5_2.jpg"
+        },
+        "tagLine": "Small and sure",
+        "updatedAt": "2016-05-19T06:59:32.204Z"
+    },
+	{			"id":5,
+        "createdAt": "2016-05-19T05:19:31.174Z",
+        "farmAreaCode": "Ol Kalau",
+        "farmDescr": "We get our supplies from our vast farm. We delevier quickly",
+        "farmLocation": {
+            "__type": "GeoPoint",
+            "latitude": 37.386196601958,
+            "longitude": -121.964346639
+        },
+        "farmName": "Kemboi Farms",
+        "farmSize": "25 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "Eli3qfN9C2"
+        },
+        "objectId": "boDVVGPn3l",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-f8a55ae4-ef3e-427f-96db-aadf7e17a2d1-farm1.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-f8a55ae4-ef3e-427f-96db-aadf7e17a2d1-farm1.jpg"
+        },
+        "tagLine": "Quality production. Fast Delivery",
+        "updatedAt": "2016-05-19T06:59:59.692Z"
+    },
+	{			"id":6,
+        "createdAt": "2016-05-18T16:28:17.399Z",
+        "farmAreaCode": "Juja",
+        "farmDescr": "From our modest farms, we produce quality produce that is guaranteed to satisfy all our customers",
+        "farmName": "By Grace Farm",
+        "farmSize": "4 1/2 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "17c23h2WLO"
+        },
+        "objectId": "dZCv5HrjSn",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-b74f0ff2-dd5a-43cb-886f-9b470e98db2f-farm6.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-b74f0ff2-dd5a-43cb-886f-9b470e98db2f-farm6.jpg"
+        },
+        "tagLine": "Farming done right",
+        "updatedAt": "2016-05-19T06:58:31.305Z"
+    },
+	{			"id":7,
+        "createdAt": "2016-05-18T16:27:04.905Z",
+        "farmAreaCode": "kiambu",
+        "farmDescr": "Customer satisfaction is our main aim. We use the best practices, the best seeds and the are completely green.",
+        "farmName": "Quality Farmers",
+        "farmSize": "16 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "0aX5h0NFaT"
+        },
+        "objectId": "mNVUjFvcBc",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-1a7e6f0f-f642-4c98-8424-f98573d75482-farm9.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-1a7e6f0f-f642-4c98-8424-f98573d75482-farm9.jpg"
+        },
+        "tagLine": "We grow quality. We grow Quantity",
+        "updatedAt": "2016-05-19T06:59:06.316Z"
+    },
+	{			"id":8,
+        "createdAt": "2016-05-18T16:30:14.056Z",
+        "farmAreaCode": "Thika",
+        "farmDescr": "Started in 1989, Zuri Farms is an establshed supplier of quality Agricultural products",
+        "farmName": "Zuri Farms",
+        "farmSize": "20 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "P9GcNeDNP6"
+        },
+        "objectId": "ouZlezuOI3",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-bb418898-86ec-4ded-bdb1-a758478dd569-farm1.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-bb418898-86ec-4ded-bdb1-a758478dd569-farm1.jpg"
+        },
+        "tagLine": "Trust Zuri",
+        "updatedAt": "2016-05-19T06:57:34.281Z"
+    },
+	{			"id":9,
+        "createdAt": "2016-05-18T16:29:35.076Z",
+        "farmAreaCode": "Murang'a",
+        "farmDescr": "A family owned farm. We strive to use the best agricultural practices to produce fresh, quality products",
+        "farmName": "Muchiri Farms",
+        "farmSize": "12 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "vXMBKtKdKs"
+        },
+        "objectId": "pC9NmTKsUM",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-39402806-19a6-43f6-bf81-070ca8456d39-farm4_2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-39402806-19a6-43f6-bf81-070ca8456d39-farm4_2.jpg"
+        },
+        "tagLine": "Fresh quality produce, with a touch of family",
+        "updatedAt": "2016-05-19T07:01:13.448Z"
+    },
+	{			"id":10,
+        "createdAt": "2016-05-18T16:29:15.902Z",
+        "farmAreaCode": "Ruiru",
+        "farmDescr": "At Value Farm, we want our clients to get the best value for their money. Our produce is grown using the highest international standards",
+        "farmName": "Value Farm",
+        "farmSize": "10 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "PNgWgTB0CH"
+        },
+        "objectId": "rLFp9jVoZ5",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-5cdbb451-0994-44d2-b1d6-72f89516d462-farm7.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-5cdbb451-0994-44d2-b1d6-72f89516d462-farm7.jpg"
+        },
+        "tagLine": "You want value? Buy from Value Farms",
+        "updatedAt": "2016-05-19T07:01:37.089Z"
+    },
+	{			"id":11,
+        "createdAt": "2016-05-18T16:30:47.361Z",
+        "farmAreaCode": "Nairobi",
+        "farmDescr": "We grow quality crops and use the latest technology",
+        "farmName": "Goodwill Farm",
+        "farmSize": "5 acres",
+        "farmerID": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "106oxUh24V"
+        },
+        "objectId": "zPZkuRuOFQ",
+        "profilePic": {
+            "__type": "File",
+            "name": "tfss-31ba9616-0529-4183-8b97-e6df3ed5dbd2-farm2.jpg",
+            "url": "http://files.parsetfss.com/4d3c7cce-31b1-4d78-8e1a-40925b181229/tfss-31ba9616-0529-4183-8b97-e6df3ed5dbd2-farm2.jpg"
+        },
+        "tagLine": "Quality is key",
+        "updatedAt": "2016-05-19T07:00:43.638Z"
+    }
+] }
