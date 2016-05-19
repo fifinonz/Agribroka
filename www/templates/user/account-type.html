@@ -1,0 +1,26 @@
+<div class="modal">
+  <ion-header-bar>
+    <div class="buttons">
+    </div>
+  </ion-header-bar>
+ <ion-content class="padding">
+  <div class="row form-heading">
+      <div class="col">
+            <h1 class="form-title" style="text-align: center;">Welcome</h1>
+             <h3 class="form-sub-title text-center">Select An Account Type Below</h3>
+            </div>
+          </div>
+    <form ng-submit="createProfile()" class="gem-form">
+      <div class="list">
+        <label class="item">
+          <h1 class="form-sub-title text-center">Account Type</h1>
+        </label><br>
+        <!-- Account Types -->
+          <h3><input type="radio" name="accType" value="farmer" ng-model="accTypeData.type" checked>Farmer</h3><br>
+          <h3><input type="radio" name="accType" value="buyer" ng-model="accTypeData.type" >Buyer<br></h3>
+
+          <button class="button button-block button-positive" type="submit">Create</button>
+      </div>
+      </form>
+  </ion-content>
+</div>

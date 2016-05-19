@@ -1,7 +1,44 @@
-angular.module('agribroka.data', [])
+angular.module('mobionicApp.data', [])
+
+// Home Data: Home page configuration
+.factory('Data', function(){
+    var data = {};
+    
+    data.items = [
+        { 
+            title: 'News',
+            icon: 'ion-calendar',
+            note: 'Latest News',
+            url: '#/app/youtubevideos'
+        },
+        { 
+            title: 'Products',
+            icon: 'ion-bag',
+            note: 'My Products',
+            url: '#/app/products'
+        },
+        { 
+            title: 'Activity',
+            icon: 'ion-stats-bars',
+            note: 'Recent Activity',
+            url: '#/app/contact'
+        },
+
+        { 
+            title: 'About',
+            icon: 'ion-person-stalker',
+            note: 'About Us',
+            url: '#/app/member'
+        },
+
+
+    ]; 
+    
+    return data;
+})
 
 // Guest Data: Guest page configuration
-.factory('Data', function(){
+.factory('GuestData', function(){
     var data = {};
     
     data.items = [
@@ -11,6 +48,13 @@ angular.module('agribroka.data', [])
             note: 'Visit the farms',
             url: '#/app/news'
         },
+
+        { 
+            title: 'Create Account',
+            icon: 'ion-person-add',
+            note: 'Join today',
+            url: 'signUp()'
+        },
         { 
             title: 'Products',
             icon: 'ion-ios-cart',
@@ -18,16 +62,10 @@ angular.module('agribroka.data', [])
             url: '#/app/feed'
         },
         { 
-            title: 'Create Account',
-            icon: 'ion-person-add',
-            note: 'Join today',
-            url: '#/app/signUp'
-        },
-        { 
             title: 'Login',
             icon: 'ion-home',
             note: 'Go to your account',
-            url: '#/app/login()'
+            url: 'login()'
         },
 
     ]; 
@@ -46,25 +84,21 @@ angular.module('agribroka.data', [])
             url: '#/app'
         },        
         { 
-            title: 'Elements',
+            title: 'Seasons',
             icon: 'ion-code',
-            url: '#/app/templates/elements'
+            url: '#/app/elements'
         },        
         { 
-            title: 'Tabs',
+            title: 'Crops Catalouge',
             icon: 'ion-drag',
-            url: '#/app/templates/tabs'
+            url: '#/app/tabs'
         },
         { 
-            title: 'Grid',
+            title: 'Price List',
             icon: 'ion-grid',
-            url: '#/app/templates/grid'
+            url: '#/app/grid'
         },
-        { 
-            title: 'RSS (Pull to refresh)',
-            icon: 'ion-social-rss',
-            url: '#/app/templates/feeds-refresher'
-        }
+
     ]; 
     
     return data;
@@ -79,25 +113,25 @@ angular.module('agribroka.data', [])
             title: 'Device',
             icon: 'ion-ipad',
             note: 'Device API',
-            url: '#/app/templates/plugins/device'
+            url: '#/app/plugins/device'
         },
         { 
             title: 'Geolocation',
             icon: 'ion-location',
             note: 'Geolocation API',
-            url: '#/app/templates/plugins/geolocation'
+            url: '#/app/plugins/geolocation'
         },
         { 
             title: 'Notifications',
             icon: 'ion-alert',
             note: 'Dialogs API',
-            url: '#/app/templates/plugins/notifications'
+            url: '#/app/plugins/notifications'
         },
         { 
             title: 'Barcode',
             icon: 'ion-qr-scanner',
             note: 'Barcode Scanner',
-            url: '#/app/templates/plugins/barcodescanner'
+            url: '#/app/plugins/barcodescanner'
         }
     ]; 
     
@@ -556,7 +590,7 @@ angular.module('agribroka.data', [])
     var videosUrl    = apiUrl + 'playlistItems?part=snippet&key=' + youtubeKey + '&maxResults=' + 20;
     var playlistsUrl = apiUrl + 'channels?part=contentDetails&key=' + youtubeKey;
     
-    var username = 'apple';
+    var username = 'Princessflyra';
 
     var data = [];
     var result = [];
@@ -602,8 +636,8 @@ angular.module('agribroka.data', [])
 
         return $http.get(url).then(function(response) {
             var items = response.data.items;
-            if (items.length && items[0].contentDetails.relatedPlaylists.uploads) {
-                return items[0].contentDetails.relatedPlaylists.uploads;
+            if (items.length && items[0].contentDetails.relatedPlaylists.likes) {
+                return items[0].contentDetails.relatedPlaylists.likes;
             }
 
             return null;

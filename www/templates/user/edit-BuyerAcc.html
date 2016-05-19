@@ -1,0 +1,48 @@
+
+<ion-view title="Create Buyer Profile">
+
+   <ion-content class="has-header gem-ion-content profile-edit">
+    <div class="gem-profile-media">
+      <div class="gem-profile-details profile2">
+        <div class="text-center">
+          <i class="icon ion-plus-circled add-user-pic-icon"></i>
+          <p class="uppercase">Add user pic</p>
+        </div>
+      </div>
+
+    </div>
+                  <form ng-submit="buyerProfile()" class="gem-form">
+                            <div class="uploaditem">
+                                <div class="space">
+                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                        <div class="fileupload-preview thumbnail"></div>
+                                        <br>
+                                        <span class="btn btn-primary btn-file">
+                                            <span class="fileupload-new">Select Avatar</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" id="profilePhotoFileUpload2" ng-file-select="onFileSelect($files)">
+
+                                        </span>
+                                        <a href="#" class="btn btn-primary fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                    </div>
+                                </div>
+
+                                <div class="space">
+                                    <label><span class="input-label">Buyer Location: </span></label>
+                                    <input type="text" class="form-control" ng-model="buyerProfileData.location" placeholder="Enter your Location">
+                                </div>
+                                <div class="space">
+                                    <label>Preffered Payment Method:</label>
+                                    <!-- Payment Types -->
+                                      <input type="radio" name="payment" value="mpesa" ng-model="buyerProfileData.payment" checked>Mpesa<br>
+                                      <input type="radio" name="payment" value="cash" ng-model="buyerProfileData.payment" >Cash<br>
+                                </div>
+                                <div class="space">
+                                    <label> <span class="input-label">Description: </span></label>
+                                    <textarea class="form-control" ng-model="buyerProfileData.buyerDescr" placeholder="Add a brief description of yourself here.."></textarea>
+                                </div>
+
+                             <button class="button button-block button-positive" ng-click="buyerProfile()"type="submit">Save Profile</button>
+                               </div>
+                            </form>
+                </ion-content><!-- end content -->
